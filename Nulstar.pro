@@ -1,11 +1,8 @@
 TEMPLATE = subdirs
-SUBDIRS += Connector \
-           Libraries \
-           NulstarMain \
-           ServiceManager
+SUBDIRS += Libraries \
+           Modules
 
-Connector.depends = Libraries
-ServiceManager.depends = Libraries
-NulstarMain.depends = ServiceManager
-NulstarMain.depends = Connector
+Modules.depends = Libraries
 
+OTHER_FILES += common.pri \
+               .qmake.conf
